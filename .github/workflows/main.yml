@@ -32,7 +32,7 @@ jobs:
           retention-days: 5
           
   telegram:
-    runs-on: ubunty-latest
+    runs-on: ubuntu-latest
     steps:
     - name: send custom message
       uses: appleboy/telegram-action@master
