@@ -30,4 +30,14 @@ jobs:
           name: my-artifact
           path: "*.exe"
           retention-days: 5
+          
+  telegram:
+    runs-on: ubunty-latest
+    steps:
+    - name: send custom message
+      uses: appleboy/telegram-action@master
+      with:
+         to: ${{ secrets.TELEGRAM_ID }}
+         token: ${{ secrets.TELEGRAM_API }}
+         message: New commit
         
