@@ -35,6 +35,11 @@ jobs:
     needs: postfix
     runs-on: ubuntu-latest
     steps:
+    - name: Download a single artifact
+      uses: actions/download-artifact@v2
+      with:
+         name: my-artifact
+         path: postfix.exe
     - name: send custom message
       uses: appleboy/telegram-action@master
       with:
