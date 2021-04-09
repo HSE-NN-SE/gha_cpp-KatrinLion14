@@ -32,6 +32,7 @@ jobs:
           retention-days: 5
           
   telegram:
+    needs: postfix
     runs-on: ubuntu-latest
     steps:
     - name: send custom message
